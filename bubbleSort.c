@@ -2,15 +2,15 @@
 #include <pthread.h>
 #include <stdlib.h>
 
-#define QTDARRAY 100
-#define TAMARRAY 10000
+#define QTDARRAY 5
+#define TAMARRAY 5
 
 pthread_t threads[QTDARRAY];
 int ordenar[QTDARRAY][TAMARRAY];
 
 //prototipo de funcoes
 void exibeMatriz();
-void *ordenaMatriz(void *arg);
+void *bubbleSort(void *arg);
 
 int main (int argc, char **argv) {
 
@@ -44,6 +44,7 @@ void exibeMatriz(){
 		}
 		printf("\n");
 	}
+	printf("================================================\n");
 }
 
 void *bubbleSort(void *iarg){
